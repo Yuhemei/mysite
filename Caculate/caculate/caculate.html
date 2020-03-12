@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <input id="val1">+<input id="val2"> <input id="val3"><button id="caculate">计算</button>
+<script >
+    $(#caculate).click(function(){
+        $.ajax({
+            url:"",
+            type:"post",
+            data:{
+                x:$(#val1).val(),
+                y:$(#val2).val()
+            },
+            success:function (res) {
+             $(#val3).html(res)
+            }
+        })
+    })
+</script>
+</body>
+</html>
